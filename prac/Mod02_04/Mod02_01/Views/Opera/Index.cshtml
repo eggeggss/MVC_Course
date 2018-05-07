@@ -1,0 +1,59 @@
+﻿@using Mod02_01.Models
+@model IEnumerable<Opera>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+</head>
+<body>
+    <h1>OperaContext</h1>
+    <div>
+
+        <table border="1">
+            <tr>
+                <th>@Html.DisplayNameFor(m => m.Title)</th>
+                <th>@Html.DisplayNameFor(m => m.Year)</th>
+                <th>@Html.DisplayNameFor(m => m.Composer)</th>
+                <th>@Html.DisplayNameFor(m => m.OperaID)</th>
+
+            </tr>
+
+            @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(mi => item.Title)</td>
+        
+
+        
+            <td>@Html.DisplayFor(mi => item.Year)</td>
+        
+       
+            <td>@Html.DisplayFor(mi => item.Composer)</td>
+       
+      
+            <td>@Html.DisplayFor(mi => item.OperaID)</td>
+        </tr>
+            }
+            
+
+        </table>
+        @*
+        <ul>
+
+            @foreach (var item in Model)
+            {
+
+                <li>@item.Title-@item.OperaID-@item.Year-@item.Composer</li>
+            }
+
+
+        </ul>*@
+    </div>
+</body>
+</html>

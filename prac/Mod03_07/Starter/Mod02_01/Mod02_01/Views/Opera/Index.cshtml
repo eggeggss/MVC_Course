@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Mod02_01.Models.Opera>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @Html.ActionLink("Create","Create","Opera")
+        <table border="1">
+            <tr>
+                <th>@Html.DisplayNameFor(m => m.Title)</th>
+                <th>@Html.DisplayNameFor(m => m.Year)</th>
+                <th>@Html.DisplayNameFor(m => m.Composer)</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+            <tr>
+                @**<td>@Html.DisplayFor(mi => item.Title)</td>*@
+                <td>@Html.ActionLink(item.Title, "Edit", new { id = item.OperaID })</td>
+                <td>@Html.DisplayFor(mi => item.Year)</td>
+                <td>@Html.DisplayFor(mi => item.Composer)</td>
+                <td>@Html.ActionLink("Details", "Details", new { id = item.OperaID })</td>
+                <td>@Html.ActionLink("Delete", "Delete", new { id = item.OperaID })</td>
+            </tr>
+            }
+        </table>
+
+    </div>
+</body>
+</html>

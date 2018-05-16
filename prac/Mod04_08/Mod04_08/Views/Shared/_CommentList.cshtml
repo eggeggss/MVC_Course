@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Mod04_08.Models.Comment>
+
+<ul style="border:1px solid red">
+    @foreach (var item in Model)
+    {
+        <li>@item.Id -- @item.Subject</li>
+    }
+</ul>

@@ -1,0 +1,27 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+</head>
+<body>
+
+    <div> 
+        <h1>系統繁忙!! 請稍後再試!!</h1>
+        <ul>
+            <li>Error Type = @Model.Exception.GetType().Name</li>
+            <li>Message = @Model.Exception.Message</li>
+            <li>Controller = @Model.ControllerName</li>
+            <li>Action = @Model.ActionName</li>
+        </ul>
+
+    </div>
+</body>
+</html>

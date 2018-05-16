@@ -1,0 +1,10 @@
+﻿@model IEnumerable<WebApplication1.Model.Comment>
+
+<ul style="border:red 1px solid;">
+
+    @foreach (var item in Model)
+    {
+        <li>@item.Subject</li>
+
+    }
+</ul>

@@ -1,0 +1,24 @@
+﻿
+@model IEnumerable<WebApplication1.Model.Comment>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetComments</title>
+</head>
+<body>
+    <div>
+        <h1>Get Comments</h1>
+
+        @Html.Partial("_CommentList")<br\>
+
+        @Html.ActionLink("Back", "Index", "Home") <br />
+    </div>
+</body>
+</html>

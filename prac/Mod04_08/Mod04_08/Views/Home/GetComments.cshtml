@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Mod04_08.Models.Comment>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetComments</title>
+</head>
+<body>
+    <div>
+        <h1>Get Comments</h1>
+
+        @Html.Partial("_CommentList")
+
+
+        @Html.ActionLink("Home", "Index")
+    </div>
+</body>
+</html>

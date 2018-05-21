@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+
+        @Html.MvcSiteMap().Menu()
+        <hr />
+        @Html.MvcSiteMap().SiteMapPath()
+        <hr />
+
+        @RenderBody()
+
+    </div>
+</body>
+</html>

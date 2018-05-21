@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Mod02_01.Models.Opera>
+@{
+    ViewBag.Title = "歌劇列表";
+}
+
+<h1>Opera Index</h1>
+<div>
+
+    <p>
+        @Html.ActionLink("新增歌劇", "Create", "Opera")
+    </p>
+    <p>
+        @using (Html.BeginForm("FilterData", "Opera", FormMethod.Get))
+        {
+            @Html.TextBox("number")
+            <input type="submit" />
+        }
+    </p>
+
+
+    <table border="1">
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.OperaID)</th>
+            <th>@Html.DisplayNameFor(m => m.Title)</th>
+            <th>@Html.DisplayNameFor(m => m.Year)</th>
+            <th>@Html.DisplayNameFor(m => m.Composer)</th>
+            <th>詳細</th>
+            <th>修改</th>
+            <th>刪除</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(mi => item.OperaID)</td>
+                <td>@Html.ActionLink(item.Title, "Edit", new { id = item.OperaID })</td>
+                <td>@Html.DisplayFor(mi => item.Year)</td>
+                <td>@Html.DisplayFor(mi => item.Composer)</td>
+                <td>@Html.ActionLink("詳細", "Details", new { id = item.OperaID })</td>
+                <td>@Html.ActionLink("修改", "Edit", new { id = item.OperaID })</td>
+                <td>@Html.ActionLink("刪除", "Delete", new { id = item.OperaID }, new { onclick = "return confirm('確定要刪除此筆資料?');" })</td>
+            </tr>
+        }
+    </table>
+    <br /><br />
+    @Html.ActionLink("回首頁", "Index", "Home")
+</div>
+

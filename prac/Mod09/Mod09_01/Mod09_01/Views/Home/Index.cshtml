@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script>
+       function clickme() {
+         alert("Hi");
+       }
+    </script>
+
+</head>
+<body>
+    <div>
+        <h1>Javascript Event Register</h1>
+
+        <input id="Button1" type="button" value="Click Me" onclick="clickme()" />
+        <hr />
+
+        Name : <input id="Text1" type="text" value="John" />
+        <input id="Button2" type="button" value="Click Me(DOM Level 0)" />
+        <input id="Button3" type="button" value="Click Me(DOM Level 0)" />
+
+    </div>
+
+    <script>
+
+        document.getElementById("Button2").onclick = clickme;
+        document.getElementById("Button3").onclick = function () {
+            document.getElementById("Text1").style.color = "red";
+            document.getElementById("Text1").style.backgroundColor = "yellow";
+            alert("Hello!!" + document.getElementById("Text1").value);
+        };
+
+    </script>
+
+</body>
+</html>

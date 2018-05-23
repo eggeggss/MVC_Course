@@ -25,12 +25,20 @@
         @Ajax.ActionLink("refresh", "Call", new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "div1", InsertionMode = InsertionMode.Replace })
 
     </div>
-    
+
     <div>
 
         @Ajax.ActionLink("CALL2", "Call2", new { id = 2 }, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "div2", InsertionMode = InsertionMode.Replace })
 
     </div>
+
+    @using (Ajax.BeginForm("Call2", new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "div2", InsertionMode = InsertionMode.Replace }))
+    {
+        <input type="text" name="id" value="3" />
+        <input type="submit" />
+    }
+
+
 
     <script src="~/Scripts/jquery-3.3.1.js"></script>
     <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>

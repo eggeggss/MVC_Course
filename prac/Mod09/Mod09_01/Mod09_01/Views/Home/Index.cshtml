@@ -10,9 +10,29 @@
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
     <script>
-       function clickme() {
-         alert("Hi");
-       }
+        function clickme() {
+            alert("Hi");
+        }
+
+        window.onload = function () {
+
+            document.getElementById("Button2").onclick = clickme;
+            document.getElementById("Button3").onclick = function () {
+                document.getElementById("Text1").style.color = "red";
+                document.getElementById("Text1").style.backgroundColor = "yellow";
+                alert("Hello!!" + document.getElementById("Text1").value);
+            };
+
+            document.getElementById("Button4").addEventListener("click", clickme);
+            document.getElementById("Button5").addEventListener("click", function () {
+                document.getElementById("Text2").style.color = "blue";
+                document.getElementById("Text2").style.backgroundColor = "green";
+                alert("Hello!!" + document.getElementById("Text2").value);
+            });
+
+        }
+
+
     </script>
 
 </head>
@@ -22,23 +42,15 @@
 
         <input id="Button1" type="button" value="Click Me" onclick="clickme()" />
         <hr />
-
         Name : <input id="Text1" type="text" value="John" />
         <input id="Button2" type="button" value="Click Me(DOM Level 0)" />
         <input id="Button3" type="button" value="Click Me(DOM Level 0)" />
+        <hr />
+        Name : <input id="Text2" type="text" value="Mary" />
+        <input id="Button4" type="button" value="Click Me(DOM Level 2)" />
+        <input id="Button5" type="button" value="Click Me(DOM Level 2)" />
 
     </div>
-
-    <script>
-
-        document.getElementById("Button2").onclick = clickme;
-        document.getElementById("Button3").onclick = function () {
-            document.getElementById("Text1").style.color = "red";
-            document.getElementById("Text1").style.backgroundColor = "yellow";
-            alert("Hello!!" + document.getElementById("Text1").value);
-        };
-
-    </script>
 
 </body>
 </html>

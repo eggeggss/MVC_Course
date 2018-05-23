@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @Html.ActionLink("Partial", "Call", "Home")
+    </div>
+    <div>
+
+        @Html.Action("Call", "Home")
+    </div>
+    <div id="div1"></div>
+    <div id="div2"></div>
+
+    <div>
+        @Ajax.ActionLink("refresh", "Call", new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "div1", InsertionMode = InsertionMode.Replace })
+
+    </div>
+    
+    <div>
+
+        @Ajax.ActionLink("CALL2", "Call2", new { id = 2 }, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "div2", InsertionMode = InsertionMode.Replace })
+
+    </div>
+
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+</body>
+</html>

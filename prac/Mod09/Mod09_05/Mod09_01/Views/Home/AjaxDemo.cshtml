@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AjaxDemo</title>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script>
+
+        $(function () {
+
+            $("#Button1").click(function () {
+
+                $.ajax({
+
+                    type: "POST",
+                    url: "/CustomerInfo.asmx/GetCustomer",
+                    data: '{"id": ' + $("#Text1").val() + '}',
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data) {
+                        console.log(data);
+                        $("#result").text(data.d.CustomerId + " -- " + data.d.Name);
+                    }
+
+                });
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div>
+        <h1>AJAX Web Service</h1>
+
+
+        ID : <input id="Text1" type="text" value="123" />
+        <input id="Button1" type="button" value="Find" />
+        <div id="result">xxx</div>
+
+    </div>
+</body>
+</html>

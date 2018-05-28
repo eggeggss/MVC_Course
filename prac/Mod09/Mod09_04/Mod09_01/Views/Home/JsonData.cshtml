@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>JsonData</title>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script>
+
+        $(function () {
+
+            $("#button1").click(function () {
+
+                $.ajax({
+
+                    type: "GET",
+                    url: "/Home/JsonData",
+                    data: "id=5&name=Mary",
+                    success: function (d) {
+                        console.log(d);
+                        $("#result").text(d.empId + " -- " + d.EmpName + " -- " + d.Age);
+                    }
+
+                });
+
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+    <div>
+        <h1>JSON Data Demo</h1>
+
+        <input type="button" value="ajax" id="button1" />
+        <div id="result">xxxx</div>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SelectorDemo</title>
+
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script>
+
+        $(function () {
+
+            $("#div1").css("border", "3px solid blue");
+            $("h1").css("color", "red");
+            //$(".myclass").css("color", "green");
+            //$(".myclass").css("font-size", 36);
+            $(".myclass").css({
+                color: "yellow",
+                "font-size": 36
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+
+    <div id="div1">
+        <h1>Database</h1>
+        <div class="myclass">
+            SQL
+        </div>
+        <h1>Programming</h1>
+        <div class="myclass">
+            ASP.NET MVC
+        </div>
+        <h1>Management</h1>
+        <div class="myclass">
+            PMP
+        </div>
+    </div>
+
+</body>
+</html>

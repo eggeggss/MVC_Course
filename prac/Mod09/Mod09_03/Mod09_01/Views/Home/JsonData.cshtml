@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>JsonData</title>
+</head>
+<body>
+    <button id="btn1">Click</button>
+    <div id="result">
+    </div>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script>
+
+        $(function () {
+
+            $('#btn1').on("click", function () {
+                //alert('ok');
+                var obj = { id=1, name='mary' };
+
+                $.post("/Home/JsonData", obj).done(function (data) {
+
+                    console.log(data);
+                    //$('#result').text(data.empId + "---" + data.EmpName + "---" + data.age);
+
+                })
+                //$.get("/Home/JsonData?id=1&name=mary",obj).done(function (data) {
+                //    $('#result').text(data.empId + "---" + data.EmpName + "---" + data.age);
+                    
+                //})
+            })
+
+        })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/themes/base/all.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.12.4.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+    <script>
+
+        $(function () {
+            $("#Text1").datepicker();
+            $('#div1').accordion();
+        });
+
+    </script>
+</head>
+<body>
+    <div> 
+        <h1>jQuery UI Demo</h1>
+
+        Date : <input id="Text1" type="text" />
+
+    </div>
+    <div id="div1">
+        <h1>Database</h1>
+        <div class="myclass">
+            SQL
+        </div>
+        <h1>Programming</h1>
+        <div class="myclass">
+            Asp.net
+        </div>
+        <h1>Management</h1>
+        <div class="myclass">
+            PHP
+        </div>
+
+    </div>
+</body>
+</html>

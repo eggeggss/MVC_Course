@@ -1,0 +1,90 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <ul id="list">
+            <li></li>
+        </ul>
+        <input type="button" id="btnList" name="name" value="List" />
+    </div>
+    <form id="form1">
+        Id:<input type="text" id="id" name="Id" /> <br />
+        Name: <input type="text" name="name" id="name" value="Name" /><br />
+        <input type="button" id="btnList" value="List" />
+        <input type="button" id="btnGet" value="Get" />
+        <input type="button" id="btnInsert" value="Insert" />
+        <input type="button" id="btnUpdate" value="Update" />
+
+
+    </form>
+
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+
+            $('#btnList').on("click", function () {
+
+                $('#list').empty();
+
+                $.get("/api/course").done(function (data) {
+
+                    data.forEach(function (item) {
+
+
+
+                        $('#list').append("<li>"+item.Id+"-----"+item.Name+"</li>")
+
+                    });
+                    //console.log(data);
+                })
+
+            })
+
+
+            $('#btnGet').on('click', function () {
+
+                $.get("@Url.Content("~/api/course/")" + $('#id').val()).done(function (data) {
+
+                    if (data == null) {
+                        $('#name').val("N/A");
+                        return;
+                    }
+
+                    $('#name').val(data.Name);
+                    //console.log(data);
+                });
+
+            });
+
+            $('#btnInsert').on('click', function () {
+
+                $.post("@Url.Content("~/api/course/")", $('#form1').serialize()).done(function (data) {
+                    alert("OK");
+                });
+
+            })
+
+            $('#btnUpdate').on('click', function () {
+
+                $.put("@Url.Content("~/api/course/")", $('#form1').serialize()).done(function () {
+
+                    alert('ok');
+                });
+
+            })
+
+
+        })
+    </script>
+</body>
+</html>

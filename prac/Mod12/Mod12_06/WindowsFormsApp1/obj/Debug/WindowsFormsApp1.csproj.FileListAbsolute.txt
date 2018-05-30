@@ -1,0 +1,12 @@
+C:\MVC5\Mod12\Mod12_06\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\MVC5\Mod12\Mod12_06\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\MVC5\Mod12\Mod12_06\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\MVC5\Mod12\Mod12_06\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
+C:\MVC5\Mod12\Mod12_06\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\MVC5\Mod12\Mod12_06\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\MVC5\Mod12\Mod12_06\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+C:\MVC5\Mod12\Mod12_06\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\MVC5\Mod12\Mod12_06\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\MVC5\Mod12\Mod12_06\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\MVC5\Mod12\Mod12_06\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.dll
+C:\MVC5\Mod12\Mod12_06\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml

@@ -1,0 +1,58 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script>
+
+        $(function () {
+
+            $("#btnConnect").click(function () {
+                var url = "ws://localhost:53940/api/chat?username=" + $("#username").val();
+                this.disabled = true;
+                var ws = new WebSocket(url);
+
+                $("#btnSend").click(function () {
+                    ws.send($("#message").val());
+                });
+
+                ws.onopen = function () {
+                    ws.send("進入聊天室~");
+                };
+                ws.onerror = function (e) {
+                    alert(e.message);
+                }
+                ws.onmessage = function (e) {
+                    $("#output").append($("<li>").text(e.data));
+                    console.log("message");
+                }
+            });
+
+
+
+        });
+
+    </script>
+</head>
+<body>
+    <div>
+        <h1>聊天室Demo</h1>
+
+        使用者暱稱：<input id="username" type="text" value="John" />
+        <input id="btnConnect" type="button" value="進入聊天室" />
+        <hr />
+        訊息：<input type="text" id="message" value="嗨~" />
+        <input type="button" id="btnSend" value="送出" />
+        <ul id="output"></ul>
+
+
+    </div>
+</body>
+</html>

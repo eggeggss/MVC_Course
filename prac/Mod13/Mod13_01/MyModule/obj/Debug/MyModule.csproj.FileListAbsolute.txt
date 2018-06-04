@@ -1,0 +1,6 @@
+C:\MVC5\MVC517_PracticeSolution_NoPackages\MVC_Publish\MVC_Course\prac\Mod13\Mod13_01\MyModule\bin\Debug\MyModule.dll
+C:\MVC5\MVC517_PracticeSolution_NoPackages\MVC_Publish\MVC_Course\prac\Mod13\Mod13_01\MyModule\bin\Debug\MyModule.pdb
+C:\MVC5\MVC517_PracticeSolution_NoPackages\MVC_Publish\MVC_Course\prac\Mod13\Mod13_01\MyModule\obj\Debug\MyModule.csprojResolveAssemblyReference.cache
+C:\MVC5\MVC517_PracticeSolution_NoPackages\MVC_Publish\MVC_Course\prac\Mod13\Mod13_01\MyModule\obj\Debug\MyModule.csproj.CoreCompileInputs.cache
+C:\MVC5\MVC517_PracticeSolution_NoPackages\MVC_Publish\MVC_Course\prac\Mod13\Mod13_01\MyModule\obj\Debug\MyModule.dll
+C:\MVC5\MVC517_PracticeSolution_NoPackages\MVC_Publish\MVC_Course\prac\Mod13\Mod13_01\MyModule\obj\Debug\MyModule.pdb
